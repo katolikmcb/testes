@@ -1,5 +1,5 @@
 /* Katolik Mobile — service worker (offline + atualizações) */
-var CACHE = 'katolik-vitral-audio-f4e82b19';
+var CACHE = 'katolik-voz-9c41d7e5';
 
 /* Teto de espera para navegação: em rede ruim, serve o cache em vez de
    deixar o usuário esperando o fetch desistir (~30s). */
