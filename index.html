@@ -24,6 +24,24 @@
         flex: 1;
       }
     </style>
+    <!-- Vitral de fundo: a imagem fica atrás de todo o app, sob um véu escuro
+         de 95%, deixando o vitral quase imperceptível (só a atmosfera de cor). -->
+    <style>
+      #root {
+        background-image: linear-gradient(rgba(11, 11, 13, 0.95), rgba(11, 11, 13, 0.95)),
+          url('./vitral.jpeg');
+        background-size: cover, cover;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+      }
+      /* O React Navigation mantém as cenas de abas antigas montadas com
+         z-index:-1 (visíveis). Como o fundo do app ficou transparente para o
+         vitral aparecer, sem esta regra o conteúdo da tela anterior
+         atravissaria a atual. A cena ativa recebe z-index:0 e volta a aparecer. */
+      #root div[style*="z-index: -1"] {
+        visibility: hidden !important;
+      }
+    </style>
     <link rel="icon" href="./favicon.ico" />
     <meta name="description" content="Orações, Santo Terço interativo, Liturgia das Horas, liturgia do dia e santo do dia. 100% offline, sem cadastro." />
     <meta name="theme-color" content="#0B0B0D" />
@@ -49,7 +67,7 @@
     <meta name="twitter:description" content="Orações, Santo Terço interativo, Liturgia das Horas, liturgia do dia e santo do dia. 100% offline, sem cadastro." />
     <meta name="twitter:image" content="https://katolikmcb.github.io/katolik/icon-512.png" />
     <!-- A fonte de ícones fica disponível o quanto antes (menos "X" no lugar dos ícones) -->
-    <link rel="preload" as="font" type="font/ttf" crossorigin href="./Ionicons.67e546cd.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="./Ionicons.b4eb097d35f44ed943676fd56f6bdc51.ttf" />
     <!-- no <head> com defer: o download dos 1,5 MB começa junto com o HTML -->
     <script src="./AppEntry-65b4699a5be43d86cf12f9b9937da581.js" defer></script>
   </head>

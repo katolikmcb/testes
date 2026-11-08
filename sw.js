@@ -1,5 +1,5 @@
 /* Katolik Mobile — service worker (offline + atualizações) */
-var CACHE = 'katolik-audio-contemplacao-3c7f19a2';
+var CACHE = 'katolik-vitral-audio-f4e82b19';
 
 /* Teto de espera para navegação: em rede ruim, serve o cache em vez de
    deixar o usuário esperando o fetch desistir (~30s). */
@@ -28,7 +28,9 @@ var PRECACHE = [
   './close-icon.808e1b1b9b53114ec2838071a7e6daa7@4x.png',
   './search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png',
   './logopng-dourado.png',
+  './vitral.jpeg',
   './Ionicons.67e546cd.ttf',
+  './Ionicons.b4eb097d35f44ed943676fd56f6bdc51.ttf',
   './AppEntry-65b4699a5be43d86cf12f9b9937da581.js'
 ];
 
